@@ -1,3 +1,7 @@
+#ifndef LV_ATTRIBUTE_MEM_ALIGN
+#define LV_ATTRIBUTE_MEM_ALIGN
+#endif
+
 #ifndef LV_ATTRIBUTE_IMG_FRAME_000
 #define LV_ATTRIBUTE_IMG_FRAME_000
 #endif
@@ -765,4 +769,5 @@ const lv_img_dsc_t frame_005 = {
   .data_size = 8291,
   .data = frame_005_map,
 };
+
 
