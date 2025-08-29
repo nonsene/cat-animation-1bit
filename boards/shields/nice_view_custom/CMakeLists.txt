@@ -6,8 +6,10 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
         widgets/util.c
         widgets/peripheral_status.c
         widgets/bolt.c
+        widgets/art.c
     )
 
 endif()
+
 
 
