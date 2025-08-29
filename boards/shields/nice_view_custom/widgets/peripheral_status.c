@@ -135,7 +135,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t * art = lv_animimg_create(widget->obj);            //<--
     lv_obj_center(art);                                         //<--
     lv_animimg_set_src(art, (const void **) anim_imgs, 12);     //<--
-    lv_animimg_set_duration(art, 4800);                         //<--
+    lv_animimg_set_duration(art, 500);                         //<--
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);  //<--
     lv_animimg_start(art);  
 
@@ -147,5 +147,6 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     return 0;
 }
+
 
 lv_obj_t *zmk_widget_status_obj(struct zmk_widget_status *widget) { return widget->obj; }
