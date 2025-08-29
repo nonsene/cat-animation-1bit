@@ -3,9 +3,11 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
 
     zephyr_library_sources(
         custom_status_screen.c
+        widgets/util.c
         widgets/peripheral_status.c
-        widgets/art.c
+        widgets/bolt.c
     )
 
 endif()
+
 
