@@ -1,3 +1,17 @@
+/*
+ *
+ * Copyright (c) 2023 Collin Hodge
+ * Copyright (c) 2023 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ *
+ */
+
+#include <lvgl.h>
+
+#ifndef LV_ATTRIBUTE_MEM_ALIGN
+#define LV_ATTRIBUTE_MEM_ALIGN
+#endif
+
 #ifndef LV_ATTRIBUTE_IMG_FRAME_000
 #define LV_ATTRIBUTE_IMG_FRAME_000
 #endif
@@ -11,28 +25,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_000
         0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
 #endif
 
-  #ifdef __has_include
-  #if __has_include("lvgl.h")
-  #ifndef LV_LVGL_H_INCLUDE_SIMPLE
-  #define LV_LVGL_H_INCLUDE_SIMPLE
-  #endif
-  #endif
-  #endif
-  
-  #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
-  #include "lvgl.h"
-  #else
-  #include "lvgl/lvgl.h"
-  #endif
-  
-  
-  #ifndef LV_ATTRIBUTE_MEM_ALIGN
-  #define LV_ATTRIBUTE_MEM_ALIGN
-  #endif
-  
-  #ifndef LV_ATTRIBUTE_IMG_FRAME_000
-  #define LV_ATTRIBUTE_IMG_FRAME_000
-  #endif
   
   const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_000 uint8_t frame_000_map[] = {
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
@@ -116,15 +108,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_000
   };
 };
 
-const lv_img_dsc_t frame_000 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 140,  /* ajuste conforme a largura da imagem */
-  .header.h = 68,   /* ajuste conforme a altura da imagem */
-  .data_size = 8291,
-  .data = frame_000_map,
-};
 
 #ifndef LV_ATTRIBUTE_IMG_FRAME_001
 #define LV_ATTRIBUTE_IMG_FRAME_001
@@ -139,28 +122,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_001
         0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
 #endif
 
-  #ifdef __has_include
-  #if __has_include("lvgl.h")
-  #ifndef LV_LVGL_H_INCLUDE_SIMPLE
-  #define LV_LVGL_H_INCLUDE_SIMPLE
-  #endif
-  #endif
-  #endif
-  
-  #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
-  #include "lvgl.h"
-  #else
-  #include "lvgl/lvgl.h"
-  #endif
-  
-  
-  #ifndef LV_ATTRIBUTE_MEM_ALIGN
-  #define LV_ATTRIBUTE_MEM_ALIGN
-  #endif
-  
-  #ifndef LV_ATTRIBUTE_IMG_FRAME_001
-  #define LV_ATTRIBUTE_IMG_FRAME_001
-  #endif
   
   const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_001 uint8_t frame_001_map[] = {
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
@@ -244,15 +205,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_001
   };
 };
 
-const lv_img_dsc_t frame_001 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 140,  /* ajuste conforme a largura da imagem */
-  .header.h = 68,   /* ajuste conforme a altura da imagem */
-  .data_size = 8291,
-  .data = frame_001_map,
-};
 
 #ifndef LV_ATTRIBUTE_IMG_FRAME_002
 #define LV_ATTRIBUTE_IMG_FRAME_002
@@ -267,28 +219,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_002
         0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
 #endif
 
-  #ifdef __has_include
-  #if __has_include("lvgl.h")
-  #ifndef LV_LVGL_H_INCLUDE_SIMPLE
-  #define LV_LVGL_H_INCLUDE_SIMPLE
-  #endif
-  #endif
-  #endif
-  
-  #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
-  #include "lvgl.h"
-  #else
-  #include "lvgl/lvgl.h"
-  #endif
-  
-  
-  #ifndef LV_ATTRIBUTE_MEM_ALIGN
-  #define LV_ATTRIBUTE_MEM_ALIGN
-  #endif
-  
-  #ifndef LV_ATTRIBUTE_IMG_FRAME_002
-  #define LV_ATTRIBUTE_IMG_FRAME_002
-  #endif
   
   const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_002 uint8_t frame_002_map[] = {
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
@@ -372,15 +302,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_002
   };
 };
 
-const lv_img_dsc_t frame_002 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 140,  /* ajuste conforme a largura da imagem */
-  .header.h = 68,   /* ajuste conforme a altura da imagem */
-  .data_size = 8291,
-  .data = frame_002_map,
-};
+
 
 #ifndef LV_ATTRIBUTE_IMG_FRAME_003
 #define LV_ATTRIBUTE_IMG_FRAME_003
@@ -395,28 +317,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_003
         0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
 #endif
 
-  #ifdef __has_include
-  #if __has_include("lvgl.h")
-  #ifndef LV_LVGL_H_INCLUDE_SIMPLE
-  #define LV_LVGL_H_INCLUDE_SIMPLE
-  #endif
-  #endif
-  #endif
-  
-  #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
-  #include "lvgl.h"
-  #else
-  #include "lvgl/lvgl.h"
-  #endif
-  
-  
-  #ifndef LV_ATTRIBUTE_MEM_ALIGN
-  #define LV_ATTRIBUTE_MEM_ALIGN
-  #endif
-  
-  #ifndef LV_ATTRIBUTE_IMG_FRAME_003
-  #define LV_ATTRIBUTE_IMG_FRAME_003
-  #endif
   
   const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_003 uint8_t frame_003_map[] = {
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
@@ -500,15 +400,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_003
   };
 };
 
-const lv_img_dsc_t frame_003 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 140,  /* ajuste conforme a largura da imagem */
-  .header.h = 68,   /* ajuste conforme a altura da imagem */
-  .data_size = 8291,
-  .data = frame_003_map,
-};
 
 #ifndef LV_ATTRIBUTE_IMG_FRAME_004
 #define LV_ATTRIBUTE_IMG_FRAME_004
@@ -522,29 +413,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_004
         0x00, 0x00, 0x00, 0xff, /*Color of index 0*/
         0xff, 0xff, 0xff, 0xff, /*Color of index 1*/
 #endif
-
-  #ifdef __has_include
-  #if __has_include("lvgl.h")
-  #ifndef LV_LVGL_H_INCLUDE_SIMPLE
-  #define LV_LVGL_H_INCLUDE_SIMPLE
-  #endif
-  #endif
-  #endif
-  
-  #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
-  #include "lvgl.h"
-  #else
-  #include "lvgl/lvgl.h"
-  #endif
-  
-  
-  #ifndef LV_ATTRIBUTE_MEM_ALIGN
-  #define LV_ATTRIBUTE_MEM_ALIGN
-  #endif
-  
-  #ifndef LV_ATTRIBUTE_IMG_FRAME_004
-  #define LV_ATTRIBUTE_IMG_FRAME_004
-  #endif
   
   const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_004 uint8_t frame_004_map[] = {
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0,
@@ -627,15 +495,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_004
   .data = frame_004_map,
   };
 };
-
-const lv_img_dsc_t frame_004 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 140,  /* ajuste conforme a largura da imagem */
-  .header.h = 68,   /* ajuste conforme a altura da imagem */
-  .data_size = 8291,
-  .data = frame_004_map,
+ata = frame_004_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_FRAME_005
@@ -733,5 +593,6 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FRAME_005
   .data = frame_005_map,
   };
 };
+
 
 
